@@ -103,7 +103,7 @@ public class CatalogPieceOfFurniture implements Comparable<CatalogPieceOfFurnitu
    * Creates an unmodifiable catalog piece of furniture of the default catalog.
    * @param id    the id of the new piece or <code>null</code>
    * @param name  the name of the new piece
-   * @param description the description of the new piece 
+   * @param description the description of the new piece
    * @param icon content of the icon of the new piece
    * @param model content of the 3D model of the new piece
    * @param width  the width in centimeters of the new piece
@@ -606,6 +606,13 @@ public class CatalogPieceOfFurniture implements Comparable<CatalogPieceOfFurnitu
    */
   public float getWidth() {
     return this.width;
+  }
+
+  /**
+   * Returns the width of this piece of furniture.
+   */
+  public float getVolume() {
+    return getWidth() * getHeight() * getDepth();
   }
 
   /**
